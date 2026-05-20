@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: "Limelight", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#heroImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+  header {
+    margin: 2rem 0 2rem 0;
+    background-color: #ffffffee;
+  }
+
+  #menuBtn {
+    display: block;
+    position: relative;
+    left: 46.5%;
+  }
+
+    #logoBox {
+      position: relative;
+      left: 37%;
+    width: 25%;
+  }
+
+  #logo {
+    width: 100%;
+    height: auto;
+
+  }
+
+  #navLinks {
+    display: none;
+    font-size: 1.0em;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+
+    background: #ffffffee;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    list-style: none;
+    border-radius: 0.5rem;
+
+
+  }
+
+  li {
+    padding: 1em;
+  }
+
+  #navLinks.open {
+    display: flex;
+  }
+
+  #nav {
+    position: relative;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+
+#lunchmenu {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9e9e9;
+  margin-top: 3rem;
+  text-align: center;
+  width: 75%;
+}
+
+#dish {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1rem;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.54);
+  background-color: #dcdcdc;
+  width: 35%;
+}
+
+#footer {
+  display: flex;
+  background: #ffffffcc;
+}
+
+#footerNav {}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  header {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nav {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  #logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+
+  #logo {
+    width: 100%;
+    height: auto;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-column-start: 2;
+    gap: 1em;
+    justify-items: center;
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  li {
+    column-span: 2, 3;
+    padding: 0 1rem 0 1rem;
+  }
+
+  #navLinks {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #1e6252;
+  }
+
+  #navLinks:hover {
+    text-decoration: underline;
+  }
+
+
+  #lunchmenu {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    margin-top: 3rem;
+    text-align: center;
+    width: 75%;
+  }
+
+  #dish {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.54);
+    background-color: #dcdcdc;
+    width: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  header {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nav {
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-column-start: 2;
+    gap: 7rem;
+    justify-items: center;
+    align-items: flex-start;
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  li {
+    column-span: 2, 3;
+  }
+
+  #navLinks {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #1e6252;
+  }
+
+  #navLinks:hover {
+    text-decoration: underline;
+  }
+
+  #logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+
+  #logo {
+    width: 100%;
+    height: auto;
+  }
+
+  #lunchmenu {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(233, 233, 233);
+    margin-top: 3rem;
+    text-align: center;
+    width: 75%;
+  }
+
+  #dish {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.54);
+    background-color: #dcdcdc;
+    width: 35%;
+  }
+}
