@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="preload" as="image" href="/images/highway.webp">
+  <script type="module" src="src/main.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E4-Haket</title>
+</head>
+
+<body>
+  <img src="/images/highway.webp" alt="" id="heroImg" fetchpriority="high">
+  <header>
+    <nav id="nav">
+      <div id="logoBox">
+        <img id="logo" src="/e4haket.svg">
+      </div>
+      <button id="menuBtn">
+        <img src="/menu.svg">
+      </button>
+      <ul id="navLinks">
+        <li><a href="index.html">Startsida</a></li>
+        <li><a href="takeaway.html">Beställ mat</a></li>
+        <li><a href="about.html">Om E4Haket</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <article id="contact">
+        <h1 id="contactHeader">
+            Kontakta oss
+        </h1>
+        <h2>Funderar du över något eller vill du lämna feedback? <br>Fyll i formuläret nedan!</h2>
+        <form id="contactform">
+            <label for="firstname">Förnamn:</label>
+            <input type="text" name="firstname" id="firstname">
+            <label for="surname">Efternamn:</label>
+            <input type="text" name="surname" id="surname">
+            <label for="email">E-post:</label>
+            <input type="text" name="email" id="email">
+            <label for="phone">Telefon:</label>
+            <input type="text" name="phone" id="phone">
+            <textarea id="message">Meddelande...</textarea>
+        </form>
+    </article>
+  </main>
+  <footer id="footer">
+    <ul id="footerNav">
+      <li><a href="about.html">Om E4Haket</a></li>
+      <li><a href="#"><img src="/arrowUp.svg"></a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+    <div id="footerInfo">
+      <div id="find">
+        <p>Hitta oss vid avfart mot Mellanfjärden, E4an!<br>
+          <a href="https://maps.app.goo.gl/9oqSWG3ifgYyudxt6">Hittepåväg 163, 829 96, Jättendal</a>
+        </p>
+      </div>
+      <div id="socials">
+        <p>Våra socials!</p>
+        <div id="logos">
+          <img src="instagram.svg">
+          <img src="facebook.png">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
