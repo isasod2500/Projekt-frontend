@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="src/style.css">
   <link rel="preload" as="image" href="/images/highway.webp">
   <script type="module" src="src/main.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E4-Haket</title>
 </head>
@@ -32,21 +32,32 @@
   </header>
   <main>
     <article id="contact">
-        <h1 id="contactHeader">
-            Kontakta oss
-        </h1>
-        <h2>Funderar du över något eller vill du lämna feedback? <br>Fyll i formuläret nedan!</h2>
-        <form id="contactform">
-            <label for="firstname">Förnamn:</label>
-            <input type="text" name="firstname" id="firstname">
-            <label for="surname">Efternamn:</label>
-            <input type="text" name="surname" id="surname">
-            <label for="email">E-post:</label>
-            <input type="text" name="email" id="email">
-            <label for="phone">Telefon:</label>
-            <input type="text" name="phone" id="phone">
-            <textarea id="message">Meddelande...</textarea>
-        </form>
+      <h1 id="contactHeader">
+        Vill du nå oss?
+      </h1>
+      <h2>Fyll i formuläret nedan!</h2>
+      <form id="contactForm">
+        <div class="inputWrapper">
+          <label for="firstname">Förnamn:</label>
+          <input type="text" name="firstname" id="firstname">
+        </div>
+        <div class="inputWrapper">
+          <label for="surname">Efternamn:</label>
+          <input type="text" name="surname" id="surname">
+        </div>
+        <div class="inputWrapper">
+          <label for="email">E-post:</label>
+          <input type="text" name="email" id="email">
+        </div>
+        <div class="inputWrapper">
+          <label for="phone">Telefon:</label>
+          <input type="text" name="phone" id="phone">
+        </div>
+        <textarea id="message" placeholder="Meddelande..."></textarea>
+        <button id="contactSubmit">Skicka</button>
+      </form>
+
+      <p>Informationen behandlas enligt vår <a href="integrity.html">integritetspolicy</a></p>
     </article>
   </main>
   <footer id="footer">
