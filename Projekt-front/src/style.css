@@ -9,7 +9,7 @@ main {
   align-items: center;
 }
 
-#weekHeader {
+#dateHeader {
   background-color: #e9e9e9;
   padding: 1rem;
   border-radius: 15px;
@@ -45,28 +45,6 @@ main {
 h2 {
   text-align: center;
 }
-
-#lunchmenu {
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e9e9e9;
-  margin-top: 3rem;
-  text-align: center;
-  width: 75%;
-}
-
-#dish {
-  font-family: 'Times New Roman', Times, serif;
-  margin: 1rem;
-  border-radius: 15px;
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.54);
-  background-color: #dcdcdc;
-  width: 35%;
-}
-
-
 
 @media (max-width: 768px) {
 
@@ -134,12 +112,13 @@ h2 {
     grid-row-gap: 0px;
     border-radius: 15px;
     justify-items: center;
+    text-align: center;
     background-color: rgba(233, 233, 233);
     margin-top: 3rem;
     width: 75%;
   }
 
-  #dish {
+  .indexDish {
     font-family: 'Times New Roman', Times, serif;
     margin: 1rem;
     border-radius: 15px;
@@ -158,12 +137,12 @@ h2 {
     }
 
     #find {
-      max-width: 20ch;
-      font-size: 4vmin;
+      text-align: center;
+      grid-area: 1 / 1 / 2 / 3;
     }
   }
 
-  #contact {
+  #indexContact {
     width: 75%;
     padding: 1rem;
     margin-top: 2rem;
@@ -174,9 +153,9 @@ h2 {
     font-size: 1.1em;
   }
 
-  #contactText {
+  #indexContactText {
     font-size: clamp(2.8vw, 2.9vw, 3vw);
-    width: 20ch;
+    max-width: 40ch;
   }
 
   #about {
@@ -225,9 +204,9 @@ h2 {
     resize: none;
   }
 
-  .inputWrapper {
+  .contactInputWrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 120px 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -235,8 +214,11 @@ h2 {
     justify-items: center;
   }
 
-  .inputWrapper input {
-    margin: 1rem;
+  .contactInputWrapper input {
+    margin: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
 
   #contactSubmit {
@@ -268,16 +250,95 @@ h2 {
     text-align: left;
     font-size: 1.1em;
     max-width: 45ch;
-
   }
 
+  #order {
+    background-color: hsla(0, 0%, 100%, 0.933);
+  }
+
+  #orderContent {
+    display: flex;
+  }
+
+  #orderForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dishSection {
+    display: grid;
+    gap: 1rem;
+    width: 45%;
+  }
+
+  #dishSection img {
+    width: 100%;
+  }
+
+  .dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .addDish {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .orderInputWrapper {
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  .orderInputWrapper input {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #orderBtn {
+    width: 50%;
+    background-color: #1e6252;
+    color: white;
+    font-size: 1.2em;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+
+
   #footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 10vh;
     background: #ffffffee;
   }
 
+
   #footerNav {
+    width: 100%;
     padding-inline-start: 0;
-    padding-top: 1rem;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -288,6 +349,7 @@ h2 {
     list-style: none;
     font-size: 3.5vmin;
   }
+
 
   #footerNav a {
     text-decoration: none;
@@ -305,7 +367,7 @@ h2 {
     grid-row-gap: 0px;
     justify-items: center;
     align-items: center;
-    font-size: 1.1em
+
   }
 
   #footerInfo p {
@@ -350,7 +412,7 @@ h2 {
     background: rgba(255, 255, 255, 0.9);
   }
 
-   #navLinks {
+  #navLinks {
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
     grid-column-start: 2;
@@ -397,7 +459,7 @@ h2 {
     width: 75%;
   }
 
-  #dish {
+  .indexDish {
     font-family: 'Times New Roman', Times, serif;
     margin: 1rem;
     border-radius: 15px;
@@ -406,7 +468,7 @@ h2 {
     width: 85%;
   }
 
-  #contact {
+  #indexContact {
     width: 75%;
     padding: 1rem;
     margin-top: 2rem;
@@ -414,6 +476,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #indexContactText {
+    max-width: 55ch;
+    text-align: center;
   }
 
   #about {
@@ -463,9 +530,9 @@ h2 {
     resize: none;
   }
 
-  .inputWrapper {
+  .contactInputWrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 120px 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -473,8 +540,11 @@ h2 {
     justify-items: center;
   }
 
-  .inputWrapper input {
-    margin: 1rem;
+  .contactInputWrapper input {
+    margin: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
 
   #contactSubmit {
@@ -507,13 +577,91 @@ h2 {
     max-width: 45ch;
   }
 
+  #order {
+    background-color: hsla(0, 0%, 100%, 0.933);
+  }
+
+  #orderContent {
+    display: flex;
+  }
+
+  #orderForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dishSection {
+    display: grid;
+    gap: 1rem;
+    width: 45%;
+  }
+
+  #dishSection img {
+    width: 100%;
+  }
+
+  .dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .addDish {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .orderInputWrapper {
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  .orderInputWrapper input {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #orderBtn {
+    width: 50%;
+    background-color: #1e6252;
+    color: white;
+    font-size: 1.2em;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
   #footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 10vh;
     background: #ffffffee;
   }
 
+
   #footerNav {
+    width: 100%;
     padding-inline-start: 0;
-    padding-top: 1rem;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -522,7 +670,7 @@ h2 {
     align-items: center;
     justify-items: center;
     list-style: none;
-    font-size: 1.3em
+    font-size: 3.5vmin;
   }
 
   #footerNav img {
@@ -588,11 +736,12 @@ h2 {
   #logos {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
   }
 
   #logos img {
     padding: 0 0.5rem 1rem 0.5rem;
-    width: 1.5em;
+    width: 1em;
   }
 }
 
@@ -661,12 +810,13 @@ h2 {
     grid-row-gap: 0px;
     border-radius: 15px;
     justify-items: center;
+    text-align: center;
     background-color: rgba(233, 233, 233);
     margin-top: 3rem;
     width: 75%;
   }
 
-  #dish {
+  .indexDish {
     font-family: 'Times New Roman', Times, serif;
     margin: 1rem;
     border-radius: 15px;
@@ -675,7 +825,7 @@ h2 {
     width: 95%;
   }
 
-  #contact {
+  #indexContact {
     width: 75%;
     padding: 1rem;
     margin-top: 2rem;
@@ -683,6 +833,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #indexContactText {
+    max-width: 55ch;
+    text-align: center;
   }
 
   #about {
@@ -701,6 +856,16 @@ h2 {
     max-width: 45ch;
     letter-spacing: 1.5px;
     line-height: 1.5em;
+  }
+
+  #contact {
+    width: 75%;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #ffffffee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #contactForm {
@@ -732,9 +897,9 @@ h2 {
     resize: none;
   }
 
-  .inputWrapper {
+  .contactInputWrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 120px 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -742,8 +907,11 @@ h2 {
     justify-items: center;
   }
 
-  .inputWrapper input {
-    margin: 1rem;
+  .contactInputWrapper input {
+    margin: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
 
   #contactSubmit {
@@ -755,7 +923,7 @@ h2 {
     box-sizing: border-box;
   }
 
-    #integrity {
+  #integrity {
     flex-wrap: wrap;
     width: 75%;
     padding: 1rem;
@@ -776,13 +944,93 @@ h2 {
     max-width: 45ch;
   }
 
+  #order {
+    background-color: hsla(0, 0%, 100%, 0.933);
+  }
+
+  #orderContent {
+    display: flex;
+  }
+
+  #orderForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dishSection {
+    display: grid;
+    gap: 1rem;
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+
+  #dishSection img {
+    width: 100%;
+  }
+
+  .orderDish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .addDish {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.0em;
+  }
+
+  .orderInputWrapper {
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  .orderInputWrapper input {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #orderBtn {
+    width: 50%;
+    background-color: #1e6252;
+    color: white;
+    font-size: 1.2em;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
   #footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 10vh;
     background: #ffffffee;
   }
 
+
   #footerNav {
+    width: 100%;
     padding-inline-start: 0;
-    padding-top: 1rem;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -791,7 +1039,7 @@ h2 {
     align-items: center;
     justify-items: center;
     list-style: none;
-    font-size: 1.3em
+    font-size: 3.5vmin;
   }
 
   #footerNav img {
@@ -806,7 +1054,7 @@ h2 {
     text-decoration: underline;
   }
 
-    #footer2 {
+  #footer2 {
     background: #ffffffee;
     height: 8vh;
   }
@@ -845,6 +1093,7 @@ h2 {
   }
 
   #find {
+    width: 25ch;
     grid-area: 1 / 1 / 2 / 3;
   }
 
@@ -856,11 +1105,12 @@ h2 {
   #logos {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
   }
 
   #logos img {
     padding: 0 0.5rem 1rem 0.5rem;
-    width: 10%;
+    width: 1em;
   }
 
 }
