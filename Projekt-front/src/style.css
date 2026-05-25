@@ -176,6 +176,16 @@ h2 {
     line-height: 1.5em;
   }
 
+  #contact {
+    width: 75%;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #ffffffee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   #contactForm {
     display: flex;
     flex-direction: column;
@@ -499,6 +509,16 @@ h2 {
     max-width: 45ch;
     letter-spacing: 1.5px;
     line-height: 1.5em;
+  }
+
+  #contact {
+    width: 75%;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #ffffffee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #contactForm {

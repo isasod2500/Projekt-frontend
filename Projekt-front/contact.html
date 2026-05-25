@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="src/style.css">
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/contact.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E4-Haket</title>
@@ -35,6 +35,9 @@
       </h1>
       <h2>Fyll i formuläret nedan!</h2>
       <form id="contactForm">
+        <ul id="errorList">
+
+        </ul>
         <div class="contactInputWrapper">
           <label for="firstname">Förnamn:</label>
           <input type="text" name="firstname" id="firstname">
@@ -53,6 +56,9 @@
         </div>
         <textarea id="message" placeholder="Meddelande..."></textarea>
         <button id="contactSubmit">Skicka</button>
+        <p id="success">
+
+        </p>
       </form>
 
       <p>Informationen behandlas enligt vår <a href="integrity.html">integritetspolicy</a></p>
