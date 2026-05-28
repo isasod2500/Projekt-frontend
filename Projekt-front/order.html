@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/style.css">
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/order.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
   <title>Beställ</title>
 </head>
@@ -21,7 +21,7 @@
         <img src="/menu.svg">
       </button>
       <ul id="navLinks">
-        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="index.html">Startsida</a></li>
         <li><a href="takeaway.html">Beställ mat</a></li>
         <li><a href="about.html">Om E4Haket</a></li>
       </ul>
@@ -35,14 +35,17 @@
         <form id="orderForm">
           <div id="dishSection">
             <div class="orderDish">
-              <img src="/images/schnitzel.webp">
-              <button class="addDish">Lägg till</button>
+              <img src="/images/schnitzel.webp" class="dishImg">
+              <button>Lägg till</button>
             </div>
             <div class="orderDish">
-              <img src="/images/schnitzel.jpg">
-              <button class="addDish">Lägg till</button>
+              <img src="/images/schnitzel.jpg" class="dishImg">
+              <button>Lägg till</button>
             </div>
           </div>
+          <ul id="errorList">
+
+          </ul>
           <div class="orderInputWrapper">
             <label for="name">Namn:</label>
             <input type="text" id="name" name="name">
@@ -59,11 +62,18 @@
             <label for="pickup">Önskad tid:</label>
             <input type="time" name="pickup" id="pickup">
           </div>
+          <div class="orderTextarea">
+            <label for="specialMsg">Önskemål:</label>
+            <textarea name="specialMsg" id="specialMsg" placeholder="Utan ägg, glutenfritt, extra potatis etc"></textarea>
+          </div>
 
           <div id="orderPreview">
 
           </div>
           <button id="orderBtn">Beställ</button>
+          <p id="success">
+            
+          </p>
         </form>
       </article>
     </section>
