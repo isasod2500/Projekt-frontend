@@ -9,7 +9,7 @@ const dishes = []
 
 async function fetchFood() {
 
-    let db = await fetch("http://127.0.0.1:3000/order/index")
+    let db = await fetch("http://127.0.0.1:3000/index")
     let result = await db.json()
 
     result.forEach(dish => {
@@ -68,6 +68,7 @@ function addFood(event) {
     for (let dish of dishes) {
         if (dish.id == dishId) {
             dish.quantity++
+            showPreview()
             return;
         }
     }
@@ -78,12 +79,45 @@ function addFood(event) {
         quantity: quantity
     }
 
-
     dishes.push(dish)
 
     console.log(dishes)
-
+    showPreview()
     return dishes;
+}
+
+function showPreview() {
+
+
+    const preview = document.getElementById("orderPreview")
+    preview.innerHTML = "";
+
+    dishes.forEach(dish => {
+
+        let previewDish = document.createElement("div")
+
+        let previewDishHeader = document.createElement("h4")
+        previewDishHeader.innerHTML = dish.dishname
+
+        let previewDishPrice = document.createElement("p")
+        previewDishPrice.innerHTML = `${dish.price}kr`
+
+        let previewDishQuantity = document.createElement("h5")
+        previewDishQuantity.innerHTML = (`${dish.quantity}`)
+
+        let totalPrice = calculatePrice()
+
+        previewDish.appendChild(previewDishHeader)
+        previewDish.appendChild(previewDishPrice)
+        previewDish.appendChild(previewDishQuantity)
+
+        preview.appendChild(previewDish)
+    });
+
+    let previewDishTotalPrice = document.createElement("h3")
+    previewDishTotalPrice.innerHTML = `Summa ${calculatePrice()} kr`
+
+    preview.appendChild(previewDishTotalPrice)
 }
 
 function calculatePrice() {
@@ -130,7 +164,7 @@ async function sendOrder(event) {
 
         if (!db.ok) {
             result.errors.forEach(error => {
-                let errorLine = document.createElement("li")
+                let errorLine = document.document.createElement("li")
                 errorLine.innerHTML = error
                 errorList.appendChild(errorLine)
 
