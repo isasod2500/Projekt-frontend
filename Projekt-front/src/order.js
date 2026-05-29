@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("orderBtn").addEventListener("click", sendOrder)
+    const menuBtn = document.getElementById("menuBtn")
+    const navLinks = document.getElementById("navLinks")
 
+    //Mobilemenu
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("open")
+    })
     fetchFood()
 })
 
@@ -66,15 +72,15 @@ function addFood(event) {
     let quantity = 1
 
     for (let dish of dishes) {
-        if (dish.id == dishId) {
+        if (dish._id == dishId) {
             dish.quantity++
             showPreview()
             return;
         }
     }
     let dish = {
+        _id: dishId,
         dishname: dishName,
-        id: dishId,
         price: Number(dishPrice),
         quantity: quantity
     }
@@ -95,6 +101,7 @@ function showPreview() {
     dishes.forEach(dish => {
 
         let previewDish = document.createElement("div")
+        previewDish.setAttribute("class", "previewDish")
 
         let previewDishHeader = document.createElement("h4")
         previewDishHeader.innerHTML = dish.dishname
@@ -103,7 +110,7 @@ function showPreview() {
         previewDishPrice.innerHTML = `${dish.price}kr`
 
         let previewDishQuantity = document.createElement("h5")
-        previewDishQuantity.innerHTML = (`${dish.quantity}`)
+        previewDishQuantity.innerHTML = (`${dish.quantity}x`)
 
         let totalPrice = calculatePrice()
 
@@ -155,7 +162,7 @@ async function sendOrder(event) {
         let db = await fetch("http://127.0.0.1:3000/order", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(formData)
         })
@@ -164,7 +171,7 @@ async function sendOrder(event) {
 
         if (!db.ok) {
             result.errors.forEach(error => {
-                let errorLine = document.document.createElement("li")
+                let errorLine = document.createElement("li")
                 errorLine.innerHTML = error
                 errorList.appendChild(errorLine)
 
@@ -172,8 +179,11 @@ async function sendOrder(event) {
             return;
         }
 
-        document.getElementById("success").innerHTML = `Beställning skickad!`
         document.getElementById("orderForm").reset();
+
+        document.getElementById("orderPreview").innerHTML = "";
+        document.getElementById("orderPreview").innerHTML = `Beställning skickad!`
+        dishes.length = 0;
     } catch (err) {
         console.log(err)
     }

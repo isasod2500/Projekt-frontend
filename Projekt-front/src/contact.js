@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("contactSubmit").addEventListener("click", () => {
         sendContact()
     })
+    const menuBtn = document.getElementById("menuBtn")
+    const navLinks = document.getElementById("navLinks")
+
+    //Mobilemenu
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("open")
+    })
 })
 
 async function sendContact() {

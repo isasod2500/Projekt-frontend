@@ -277,6 +277,12 @@ h2 {
     align-items: center;
   }
 
+  #orderForm p {
+    text-align: center;
+    max-width: 30ch;
+    margin: 1rem;
+  }
+
   #dishSection {
     display: grid;
     gap: 1rem;
@@ -355,7 +361,132 @@ h2 {
     box-sizing: border-box;
   }
 
+  #orderPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
 
+  .previewDish>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    line-height: 0;
+  }
+
+  #review {
+    background-color: hsla(0, 0%, 100%, 0.933);
+  }
+
+  #reviewContent {
+    display: flex;
+  }
+
+  #reviewForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #reviewForm p {
+    text-align: center;
+    max-width: 65ch;
+    margin: 1rem;
+  }
+
+  .reviewInputWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.2em;
+  }
+
+  .reviewInputWrapper input {
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .ratingInputWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .ratingInputWrapper label {
+    font-size: 1.3em;
+  }
+
+
+  #rating {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+  }
+
+  .reviewTextarea {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  #reviewMsg {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .reviewCheckBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .reviewCheckBox legend {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  #input {
+    grid-area: 2 / 1 / 3 / 3
+  }
+
+  #reviewBtn {
+    width: 65%;
+    background-color: #1e6252;
+    color: white;
+    font-size: 1.1em;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
 
   #footer {
     display: flex;
@@ -634,6 +765,12 @@ h2 {
     align-items: center;
   }
 
+  #orderForm p {
+    text-align: center;
+    max-width: 50ch;
+    margin: 1rem;
+  }
+
   #dishSection {
     display: grid;
     gap: 1rem;
@@ -678,7 +815,28 @@ h2 {
     box-sizing: border-box;
   }
 
+  .orderTextarea {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
 
+  #specialMsg {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
 
   #orderBtn {
     width: 50%;
@@ -687,6 +845,136 @@ h2 {
     font-size: 1.2em;
     margin: 0.5rem 0 1rem 0;
     padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #orderPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 1.2em
+  }
+
+  .previewDish>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    line-height: 0;
+  }
+
+  #review {
+    width: 50%;
+    background-color: hsla(0, 0%, 100%, 0.933);
+  }
+
+  #reviewContent {
+    display: flex;
+  }
+
+  #reviewForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #reviewForm p {
+    text-align: center;
+    max-width: 50ch;
+    margin: 1rem;
+  }
+
+  .reviewInputWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  .reviewInputWrapper input {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .ratingInputWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .ratingInputWrapper label {
+    font-size: 1.3em;
+  }
+
+
+  #rating {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+  }
+
+  .reviewTextarea {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  #reviewMsg {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .reviewCheckBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .reviewCheckBox legend {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  #input {
+    grid-area: 2 / 1 / 3 / 3
+  }
+
+  #reviewBtn {
+    width: 50%;
+    background-color: #1e6252;
+    color: white;
+    font-size: 1.1em;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem;
     box-shadow: 1px 1px 3px #cccccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -881,6 +1169,7 @@ h2 {
 
   #indexContactText {
     max-width: 55ch;
+    font-size: 1.3em;
     text-align: center;
   }
 
@@ -1003,6 +1292,12 @@ h2 {
     align-items: center;
   }
 
+  #orderForm p {
+    text-align: center;
+    max-width: 65ch;
+    margin: 1rem;
+  }
+
   #dishSection {
     display: grid;
     gap: 1rem;
@@ -1049,6 +1344,29 @@ h2 {
     box-sizing: border-box;
   }
 
+  .orderTextarea {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  #specialMsg {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
   #orderBtn {
     width: 50%;
     background-color: #1e6252;
@@ -1056,6 +1374,135 @@ h2 {
     font-size: 1.2em;
     margin: 0.5rem 0 1rem 0;
     padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #orderPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 1.2em
+  }
+
+  .previewDish>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    line-height: 0;
+  }
+
+  #review {
+    width: 50%;
+    background-color: hsla(0, 0%, 100%, 0.933);
+  }
+
+  #reviewContent {
+    display: flex;
+  }
+
+  #reviewForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #reviewForm p {
+    text-align: center;
+    max-width: 50ch;
+    margin: 1rem;
+  }
+
+  .reviewInputWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  .reviewInputWrapper input {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .ratingInputWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .ratingInputWrapper label {
+    font-size: 1.3em;
+  }
+
+
+  #rating {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+  }
+
+  .reviewTextarea {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.3em;
+  }
+
+  #reviewMsg {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 3px #cccccc;
+    border-radius: 5px;
+  }
+
+  .reviewCheckBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .reviewCheckBox legend {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  #input {
+    grid-area: 2 / 1 / 3 / 3
+  }
+
+  #reviewBtn {
+    width: 50%;
+    background-color: #1e6252;
+    color: white;
+    font-size: 1.1em;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem;
     box-shadow: 1px 1px 3px #cccccc;
     border-radius: 5px;
     box-sizing: border-box;
