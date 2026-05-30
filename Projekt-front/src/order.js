@@ -134,7 +134,7 @@ function calculatePrice() {
 }
 async function sendOrder(event) {
     event.preventDefault();
-    console.log(dishes)
+
     const errors = []
     errors.length = 0;
     const errorList = document.getElementById("errorList")
