@@ -59,6 +59,7 @@ async function fetchFood() {
 
     })
 
+    checkTime()
 
 }
 
@@ -189,3 +190,4 @@ async function sendOrder(event) {
     }
 
 }
+
