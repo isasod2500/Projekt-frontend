@@ -3,11 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="src/style.css">
-  <link rel="preload" as="image" href="/images/highway.webp">
   <script type="module" src="src/main.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E4-Haket</title>
 </head>
@@ -23,25 +21,48 @@
         <img src="/menu.svg">
       </button>
       <ul id="navLinks">
-        <li><a href="index.html">Startsida</a></li>
-        <li><a href="takeaway.html">Beställ mat</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="order.html">Beställ mat</a></li>
         <li><a href="about.html">Om E4Haket</a></li>
       </ul>
     </nav>
 
   </header>
-  <main>
-    <article id="lunchmenu">
-      <h2>Idag</h2>
-      <p>Mat här</p>
-      <div id="dish">
-        <h3>Schnitzel</h3>
-        <p>Kyckling, ägg, mjöl</p>
-        <p>Allergener: Ägg, gluten</p>
-      </div>
-    </article>
+  <main id="indexMain">
+    <h2 id="dateHeader"></h2>
+    <div id="lunchMenuWrapper">
+      <h3>Vid allergier eller dietära orsaker, fråga personal om möjligheterna att anpassa maträtterna.</h3>
+      <article id="lunchmenu">
+
+      </article>
+    </div>
+    <section id="indexContact">
+      <h2 id="indexContactHeader">Önskar du ta kontakt med oss?<br>Läs nedan!</h2>
+      <article id="indexContactText">
+        <p>Via vårt <a href="contact.html">kontaktformulär</a> kan du ta kontakt med oss gällande allt möjligt. Frågor om mat, catering, speciella anpassningar för framtida besök eller feedback om brister till exempel.</p>
+        <p> <a href="review.html"> Recensioner kan du lämna här!</a></p>
+      </article>
+    </section>
   </main>
   <footer id="footer">
+    <ul id="footerNav">
+      <li><a href="about.html">Om E4Haket</a></li>
+      <li><a href="#"><img src="/arrowUp.svg"></a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+    <div id="footerInfo">
+      <div id="find">
+        <p>Hitta oss vid avfart mot Mellanfjärden, E4an!<br>
+          <a href="https://maps.app.goo.gl/9oqSWG3ifgYyudxt6">Hittepåväg 163, 829 96, Jättendal</a>
+        </p>
+      </div>
+      <div id="socials">
+        <div id="logos">
+          <img src="instagram.svg">
+          <img src="facebook.png">
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 

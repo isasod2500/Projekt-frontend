@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="src/style.css">
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/contact.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Parisienne">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E4-Haket</title>
 </head>
@@ -24,28 +23,52 @@
       <ul id="navLinks">
         <li><a href="index.html">Startsida</a></li>
         <li><a href="order.html">Beställ mat</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="about.html">Om E4Haket</a></li>
       </ul>
     </nav>
 
   </header>
   <main>
-    <section id="about">
-      <h1 id="aboutHeader">Om oss</h1>
-      <article id="aboutText">
-        E4Haket är en lunchrestaurang med anor ända från 1700-talet, grundat av norsken Hakon Efyren. 
-        Från början var det ett härbärge för resande mellan Hudiksvall och Sundsvall, men när effektivare färdmedel som bilar kom till gjordes det om till en lunchrestaurang.
-        Företaget ägs fortfarande av Efyrens familj och strävar efter samma mål som Hakon själv satt upp; en bekväm lokal där resande kan vila sina ben och äta gott och rimligt prisat.
-        Maten som serveras består av Skandinavisk husmanskost samt nordtysk husmanskost, stabil och riktig mat helt enkelt! 
-      </article>
-      <span id="signature">Familj Efyren</span>
-    </section>
+    <article id="contact">
+      <h1 id="contactHeader">
+        Vill du nå oss?
+      </h1>
+      <h2>Fyll i formuläret nedan!</h2>
+      <form id="contactForm">
+        <ul id="errorList">
+
+        </ul>
+        <div class="contactInputWrapper">
+          <label for="firstname">Förnamn:</label>
+          <input type="text" name="firstname" id="firstname">
+        </div>
+        <div class="contactInputWrapper">
+          <label for="surname">Efternamn:</label>
+          <input type="text" name="surname" id="surname">
+        </div>
+        <div class="contactInputWrapper">
+          <label for="email">E-post:</label>
+          <input type="text" name="email" id="email">
+        </div>
+        <div class="contactInputWrapper">
+          <label for="phone">Telefon:</label>
+          <input type="text" name="phone" id="phone">
+        </div>
+        <textarea id="message" placeholder="Meddelande..."></textarea>
+        <button id="contactSubmit">Skicka</button>
+        <p id="success">
+
+        </p>
+      </form>
+
+      <p>Informationen behandlas enligt vår <a href="integrity.html">integritetspolicy</a></p>
+    </article>
   </main>
   <footer id="footer">
     <ul id="footerNav">
       <li><a href="index.html">Startsida</a></li>
       <li><a href="#"><img src="/arrowUp.svg"></a></li>
-      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="about.html">Om E4Haket</a></li>
     </ul>
     <div id="footerInfo">
       <div id="find">

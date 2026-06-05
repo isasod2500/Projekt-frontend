@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.css">
+  <script type="module" src="src/order.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
+  <title>Beställ</title>
+</head>
+
+<body>
+  <img src="/images/highway.webp" alt="" id="heroImg" fetchpriority="high">
+  <header>
+    <nav id="nav">
+      <div id="logoBox">
+        <img id="logo" src="/e4haket.svg">
+      </div>
+      <button id="menuBtn">
+        <img src="/menu.svg">
+      </button>
+      <ul id="navLinks">
+        <li><a href="index.html">Startsida</a></li>
+        <li><a href="takeaway.html">Beställ mat</a></li>
+        <li><a href="about.html">Om E4Haket</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="order">
+      <h2>Beställ upphämtning</h2>
+      <article id="orderContent">
+        <form id="orderForm">
+          <div id="dishSection">
+           
+          </div>
+          <ul id="errorList">
+
+          </ul>
+          <div class="orderInputWrapper">
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="orderInputWrapper">
+            <label for="email">E-post:</label>
+            <input type="text" name="email" id="email">
+          </div>
+          <div class="orderInputWrapper">
+            <label for="phone">Telefon:</label>
+            <input type="text" name="phone" id="phone">
+          </div>
+          <div class="orderInputWrapper">
+            <label for="pickup">Önskad tid:</label>
+            <input type="time" name="pickup" id="pickup">
+          </div>
+          <div class="orderTextarea">
+            <label for="specialMsg">Önskemål:</label>
+            <textarea name="specialMsg" id="specialMsg" placeholder="Utan ägg, glutenfritt, extra potatis etc"></textarea>
+          </div>
+          <p><i>Beställningar, beroende på storlek, tar mellan 15-30 minuter. Riktigt stora beställningar kan ta längre tid.</i></p>
+
+          <div id="orderPreview">
+
+          </div>
+          <button id="orderBtn">Beställ</button>
+        </form>
+      </article>
+    </section>
+  </main>
+  <footer id="footer">
+    <ul id="footerNav">
+      <li><a href="index.html">Startsida</a></li>
+      <li><a href="#"><img src="/arrowUp.svg"></a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
