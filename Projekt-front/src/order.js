@@ -51,6 +51,12 @@ async function fetchFood() {
         addDish.addEventListener("click", addFood)
 
         dishBox.appendChild(dishHeader)
+        if (dish.image) {
+            let dishImage = document.createElement("div")
+            dishImage.setAttribute("class", "dishImage")
+            dishImage.innerHTML += `<img src="${dish.image}">`
+            dishBox.appendChild(dishImage)
+        }
         dishBox.appendChild(dishAlrgs)
         dishBox.appendChild(dishPrice)
         dishBox.appendChild(dishImg)
@@ -58,8 +64,6 @@ async function fetchFood() {
         dishSection.appendChild(dishBox)
 
     })
-
-    checkTime()
 
 }
 
@@ -160,7 +164,7 @@ async function sendOrder(event) {
     }
 
     try {
-        let db = await fetch("http://127.0.0.1:3000/order", {
+        let db = await fetch("http://127.0.0.1:3000/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

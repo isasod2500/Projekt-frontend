@@ -22,7 +22,7 @@ function getDate() {
 
   const days = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"]
   let day = days[d.getDay()]
-  
+
 
   let dateHeader = document.getElementById("dateHeader")
   dateHeader.innerHTML = `${day}, v${week}`
@@ -30,7 +30,7 @@ function getDate() {
 
 
 async function fetchDishes() {
-  
+
   let db = await fetch("http://127.0.0.1:3000/index")
   let result = await db.json()
 
@@ -51,6 +51,12 @@ async function fetchDishes() {
 
 
     indexDish.appendChild(dishName)
+    if (dish.image) {
+      let dishImage = document.createElement("div")
+      dishImage.setAttribute("class", "dishImage")
+      dishImage.innerHTML += `<img src="${dish.image}">`
+      indexDish.appendChild(dishImage)
+    }
     indexDish.appendChild(dishIngr)
     indexDish.appendChild(dishAlrgs)
 
