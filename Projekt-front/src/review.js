@@ -52,7 +52,7 @@ async function sendReview(event) {
     }
 
     try {
-        let db = await fetch("http://127.0.0.1:3000/review", {
+        let db = await fetch("https://projekt-backend-s1gd.onrender.com/review", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

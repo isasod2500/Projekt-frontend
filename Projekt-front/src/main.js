@@ -31,7 +31,7 @@ function getDate() {
 
 async function fetchDishes() {
 
-  let db = await fetch("http://127.0.0.1:3000/index")
+  let db = await fetch("https://projekt-backend-s1gd.onrender.com/index")
   let result = await db.json()
 
   const lunchmenu = document.getElementById("lunchmenu")
