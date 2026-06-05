@@ -164,7 +164,7 @@ async function sendOrder(event) {
     }
 
     try {
-        let db = await fetch("http://127.0.0.1:3000/orders", {
+        let db = await fetch("https://projekt-backend-s1gd.onrender.com/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

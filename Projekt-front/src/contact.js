@@ -47,7 +47,7 @@ async function sendContact() {
     }
 
     try {
-        let db = await fetch("http://127.0.0.1:3000/contact", {
+        let db = await fetch("https://projekt-backend-s1gd.onrender.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
