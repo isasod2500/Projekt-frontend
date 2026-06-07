@@ -15,7 +15,7 @@ const dishes = []
 
 async function fetchFood() {
 
-    let db = await fetch("http://127.0.0.1:3000/index")
+    let db = await fetch("https://projekt-backend-s1gd.onrender.com/index")
     let result = await db.json()
 
     result.forEach(dish => {
@@ -92,7 +92,6 @@ function addFood(event) {
 
     dishes.push(dish)
 
-    console.log(dishes)
     showPreview()
     return dishes;
 }

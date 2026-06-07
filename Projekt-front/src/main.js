@@ -71,6 +71,4 @@ async function fetchDishes() {
   })
 
 
-
-  console.log(result)
 }
