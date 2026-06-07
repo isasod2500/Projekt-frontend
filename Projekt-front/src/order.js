@@ -38,9 +38,6 @@ async function fetchFood() {
         dishPrice.setAttribute("class", "dishPrice")
         dishPrice.innerHTML = `${dish.price}kr`
 
-        let dishImg = document.createElement("img")
-        dishImg.setAttribute("class", "dishImg")
-
         let addDish = document.createElement("button")
         addDish.setAttribute("class", "addDish")
         addDish.setAttribute("data-id", dish._id)
@@ -56,12 +53,12 @@ async function fetchFood() {
             const imageUrl = `https://projekt-backend-s1gd.onrender.com/uploads/${dish.image}`;
             let dishImage = document.createElement("div")
             dishImage.setAttribute("class", "dishImage")
-            dishImage.innerHTML = `<img src="${imageUrl}">`;
+            dishImage.innerHTML = `<img src="${imageUrl}" alt="${dish.dishname}">`;
+            
             dishBox.appendChild(dishImage)
         }
         dishBox.appendChild(dishAlrgs)
         dishBox.appendChild(dishPrice)
-        dishBox.appendChild(dishImg)
         dishBox.appendChild(addDish)
         dishSection.appendChild(dishBox)
 
