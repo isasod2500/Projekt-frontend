@@ -52,10 +52,11 @@ async function fetchDishes() {
 
     indexDish.appendChild(dishName)
     if (dish.image) {
+      const imageUrl = `https://projekt-backend-s1gd.onrender.com/uploads/${dish.image}`;
       let dishImage = document.createElement("div")
       dishImage.setAttribute("class", "dishImage")
-      dishImage.innerHTML += `<img src="${dish.image}">`
-      indexDish.appendChild(dishImage)
+      dishImage.innerHTML = `<img src="${imageUrl}">`;
+      adminDishDiv.appendChild(dishImage)
     }
     indexDish.appendChild(dishIngr)
     indexDish.appendChild(dishAlrgs)
