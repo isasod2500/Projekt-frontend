@@ -51,11 +51,13 @@ async function fetchFood() {
         addDish.addEventListener("click", addFood)
 
         dishBox.appendChild(dishHeader)
+
         if (dish.image) {
+            const imageUrl = `https://projekt-backend-s1gd.onrender.com/uploads/${dish.image}`;
             let dishImage = document.createElement("div")
             dishImage.setAttribute("class", "dishImage")
-            dishImage.innerHTML += `<img src="${dish.image}">`
-            dishBox.appendChild(dishImage)
+            dishImage.innerHTML = `<img src="${imageUrl}">`;
+            adminDishDiv.appendChild(dishImage)
         }
         dishBox.appendChild(dishAlrgs)
         dishBox.appendChild(dishPrice)
@@ -109,6 +111,7 @@ function showPreview() {
 
         let previewDishHeader = document.createElement("h4")
         previewDishHeader.innerHTML = dish.dishname
+
 
         let previewDishPrice = document.createElement("p")
         previewDishPrice.innerHTML = `${dish.price}kr`
