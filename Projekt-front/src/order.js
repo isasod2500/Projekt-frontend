@@ -57,7 +57,7 @@ async function fetchFood() {
             let dishImage = document.createElement("div")
             dishImage.setAttribute("class", "dishImage")
             dishImage.innerHTML = `<img src="${imageUrl}">`;
-            adminDishDiv.appendChild(dishImage)
+            dishBox.appendChild(dishImage)
         }
         dishBox.appendChild(dishAlrgs)
         dishBox.appendChild(dishPrice)

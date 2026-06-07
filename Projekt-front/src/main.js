@@ -56,7 +56,7 @@ async function fetchDishes() {
       let dishImage = document.createElement("div")
       dishImage.setAttribute("class", "dishImage")
       dishImage.innerHTML = `<img src="${imageUrl}">`;
-      adminDishDiv.appendChild(dishImage)
+      indexDish.appendChild(dishImage)
     }
     indexDish.appendChild(dishIngr)
     indexDish.appendChild(dishAlrgs)
