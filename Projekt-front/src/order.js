@@ -22,7 +22,6 @@ async function fetchFood() {
 
         let dishSection = document.getElementById("dishSection")
 
-
         let dishBox = document.createElement("div")
         dishBox.setAttribute("class", "orderDish")
 
