@@ -53,7 +53,7 @@ async function fetchFood() {
             let dishImage = document.createElement("div")
             dishImage.setAttribute("class", "dishImage")
             dishImage.innerHTML = `<img src="${imageUrl}" alt="${dish.dishname}">`;
-            
+
             dishBox.appendChild(dishImage)
         }
         dishBox.appendChild(dishAlrgs)
@@ -150,6 +150,24 @@ async function sendOrder(event) {
     let pickup = document.getElementById("pickup").value
     let message = document.getElementById("specialMsg").value
     let totalPrice = calculatePrice()
+
+    if (name == "" || pickup == "") {
+        errors.push(`Namn och upphämtningstid måste fyllas i`)
+    }
+
+    if (phone == "" && email == "") {
+        errors.push(`Ett av kontaktfälten måste fyllas i`)
+    }
+
+    if (errors.length > 0) {
+        errors.forEach(error => {
+            let errorLine = document.createElement("li")
+            errorLine.innerHTML = error
+            errorList.appendChild(errorLine)
+
+        });
+        return;
+    }
 
     let formData = {
         name: name,
