@@ -25,51 +25,55 @@ function getDate() {
 
 
   let dateHeader = document.getElementById("dateHeader")
-  dateHeader.innerHTML = `${day}, v${week}`
+  dateHeader.textContent = `${day}, v${week}`
 }
 
 
 async function fetchDishes() {
 
-  let db = await fetch("https://projekt-backend-s1gd.onrender.com/index")
-  let result = await db.json()
+  try {
+    let db = await fetch("https://projekt-backend-s1gd.onrender.com/index")
+    let result = await db.json()
 
-  const lunchmenu = document.getElementById("lunchmenu")
+    const lunchmenu = document.getElementById("lunchmenu")
+    lunchmenu.innerHTML = ""
 
-  result.forEach(dish => {
+    result.forEach(dish => {
 
-    const indexDish = document.createElement("div")
-    indexDish.setAttribute("class", "indexDish")
+      const indexDish = document.createElement("div")
+      indexDish.setAttribute("class", "indexDish")
 
-    let dishName = document.createElement("h3")
-    let dishIngr = document.createElement("p")
-    let dishAlrgs = document.createElement("p")
+      let dishName = document.createElement("h3")
+      let dishIngr = document.createElement("p")
+      let dishAlrgs = document.createElement("p")
 
-    dishName.innerHTML = dish.dishname
-    dishIngr.innerHTML = dish.ingredients
-    dishAlrgs.innerHTML = `Allergener: ${dish.allergens}`
-
-
-    indexDish.appendChild(dishName)
-    if (dish.image) {
-      const imageUrl = `https://projekt-backend-s1gd.onrender.com/uploads/${dish.image}`;
-      let dishImage = document.createElement("div")
-      dishImage.setAttribute("class", "dishImage")
-      dishImage.innerHTML = `<img src="${imageUrl}" alt="${dish.dishname}">`;
-      indexDish.appendChild(dishImage)
-    }
-    indexDish.appendChild(dishIngr)
-    indexDish.appendChild(dishAlrgs)
+      dishName.textContent = dish.dishname
+      dishIngr.textContent = dish.ingredients
+      dishAlrgs.textContent = `Allergener: ${dish.allergens}`
 
 
-    if (dish.diet) {
-      let dishDiet = document.createElement("p")
-      dishDiet.innerHTML = dish.diet
-      indexDish.appendChild(dishDiet)
-    }
+      indexDish.appendChild(dishName)
+      if (dish.image) {
+        const imageUrl = `https://projekt-backend-s1gd.onrender.com/uploads/${dish.image}`;
+        let dishImage = document.createElement("div")
+        dishImage.setAttribute("class", "dishImage")
+        dishImage.textContent = `<img src="${imageUrl}" alt="${dish.dishname}">`;
+        indexDish.appendChild(dishImage)
+      }
+      indexDish.appendChild(dishIngr)
+      indexDish.appendChild(dishAlrgs)
 
-    lunchmenu.appendChild(indexDish)
-  })
 
+      if (dish.diet) {
+        let dishDiet = document.createElement("p")
+        dishDiet.textContent = dish.diet
+        indexDish.appendChild(dishDiet)
+      }
 
+      lunchmenu.appendChild(indexDish)
+    })
+
+  } catch (err) {
+    console.log(err)
+  }
 }
